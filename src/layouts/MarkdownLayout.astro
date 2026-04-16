@@ -1,0 +1,186 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+
+// Format the date here so it matches your blog list style
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString(
+  "en-US",
+  {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  },
+);
+---
+
+<Layout title={frontmatter.title}>
+  <article class="prose-container">
+    <a href="/" aria-label="Back to home">←</a>
+    <header>
+      <time datetime={frontmatter.pubDate}>{formattedDate}</time>
+      <h1>{frontmatter.title}</h1>
+      <p class="description">{frontmatter.description}</p>
+    </header>
+
+    <hr class="divider" />
+
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .prose-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    color: #cdd6f4;
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  header {
+    margin-bottom: 2.5rem;
+  }
+
+  .prose-container h1 {
+    color: #fab387;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  .description {
+    color: #a6adc8;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  .prose-container time {
+    color: #b4befe;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .divider {
+    border: 0;
+    border-top: 1px solid #313244;
+    margin: 2rem 0;
+  }
+
+  .content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+
+  .content h2,
+  .content h3,
+  .content h4 {
+    color: #89dceb;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .content h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #313244;
+    padding-bottom: 0.3rem;
+  }
+  .content h3 {
+    font-size: 1.5rem;
+    color: #89b4fa;
+  }
+
+  .content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .content a {
+    color: #f5e0dc;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: inherit;
+  }
+
+  .content a:hover {
+    color: #fab387;
+    transform: none;
+  }
+
+  .content ul,
+  .content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .content blockquote {
+    border-left: 4px solid #f9e2af;
+    background: #1e1e2e;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #bac2de;
+  }
+
+  .content :not(pre) > code {
+    background: #313244;
+    color: #f5c2e7;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  .content pre {
+    background: #181825 !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #313244;
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
+
+  .content pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    font-size: 0.95rem;
+  }
+
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-family: var(--font-jetbrains-mono);
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+
+  .prose-container > a {
+    display: inline-block;
+    font-size: 2rem;
+    color: #6c7086;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .prose-container > a:hover {
+    color: #fab387;
+    transform: translateX(-5px);
+  }
+</style>
+
+<script>
+  const links = document.querySelectorAll('.content a');
+  links.forEach(link => {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+  });
+</script>

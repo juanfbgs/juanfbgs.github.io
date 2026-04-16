@@ -1,3 +1,8 @@
+---
+import { Font } from "astro:assets";
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,19 +10,60 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<Font cssVariable="--font-inter" preload />
+		<Font cssVariable="--font-jetbrains-mono" preload />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+	html {
+		font-family: var(--font-inter);
+		background-color: #1e1e2e;
+		letter-spacing: -0.025rem;
 	}
+    
+	body,
+	figure {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		color: #cdd6f4;
+	}
+
+	p {
+		color: #bac2de;
+		font-size: 0.9rem;
+		line-height: 1.5;
+		margin: 0;
+		text-wrap: pretty;
+	}	
 </style>

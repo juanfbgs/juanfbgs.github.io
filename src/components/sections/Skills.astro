@@ -1,0 +1,77 @@
+---
+import Section from "@/components/Section.astro";
+
+// Note: Ensure your @cv data matches these keys exactly
+import { skills } from "@cv";
+
+import PHP from "@/icons/php.astro";
+import Laravel from "@/icons/laravel.astro";
+import React from "@/icons/react.astro";
+import Docker from "@/icons/docker.astro";
+import Linux from "@/icons/linux.astro";
+
+const SKILLS_ICONS: Record<string, any> = {
+    PHP,
+    Laravel,
+    React,
+    Linux,
+    Docker,
+};
+---
+
+<Section title="Skills">
+    <ul>
+        {
+            skills.map(({ name }) => {
+                const iconName = name === "Next.js" ? "Next" : name;
+                const Icon = SKILLS_ICONS[iconName];
+
+                return (
+                    <li>
+                        {Icon && <Icon />} <span>{name}</span>
+                    </li>
+                );
+            })
+        }
+    </ul>
+</Section>
+
+<style>
+    ul {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 85px;
+        height: 85px;
+        background: #181825;
+        border: 1px solid #313244;
+        border-radius: 12px;
+        color: #cdd6f4;
+        font-size: 0.75rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    li:hover {
+        background: #313244;
+        border-color: #fab387;
+        transform: translateY(-3px);
+        color: #f5e0dc;
+    }
+
+    li :global(svg) {
+        width: 28px;
+        height: 28px;
+        fill: currentColor;
+    }
+</style>

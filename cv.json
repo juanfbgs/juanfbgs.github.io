@@ -1,0 +1,65 @@
+{
+    "basics": {
+        "name": "Juan Francisco Burgos",
+        "label": "Software Developer",
+        "country": "Argentina",
+        "url": "https://juanfbgs.github.io",
+        "summary": "I'm a developer documenting my journey and sharing resources on building web applications with PHP, Laravel, Livewire, and React.",
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "juanfburgos",
+                "url": "https://linkedin.com/in/juanfburgos"
+            },
+            {
+                "network": "GitHub",
+                "username": "juanfbgs",
+                "url": "https://github.com/juanfbgs"
+            }
+        ]
+    },
+    "skills": [
+        {
+            "name": "PHP",
+            "keywords": [
+                "Web development",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Laravel",
+            "keywords": [
+                "Web development",
+                "Backend"
+            ]
+        },
+        {
+            "name": "React",
+            "keywords": [
+                "Web development",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "Linux",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Docker",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Wiretask",
+            "description": "Task Manager app built with Laravel 13 and Livewire 4",
+            "url": "https://github.com/juanfbgs/wiretask"
+        }
+    ]
+}
