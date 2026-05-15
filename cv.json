@@ -4,7 +4,7 @@
         "label": "Software Developer",
         "country": "Argentina",
         "url": "https://juanfbgs.github.io",
-        "summary": "I'm a developer documenting my journey and sharing resources on building web applications with PHP, Laravel, Livewire, and React.",
+        "summary": "I'm a Software Developer building web applications using PHP, Laravel, Livewire, and React.",
         "profiles": [
             {
                 "network": "LinkedIn",
@@ -31,6 +31,13 @@
             "keywords": [
                 "Web development",
                 "Backend"
+            ]
+        },
+        {
+            "name": "Livewire",
+            "keywords": [
+                "Web development",
+                "Frontend"
             ]
         },
         {
