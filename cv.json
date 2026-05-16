@@ -4,7 +4,7 @@
         "label": "Software Developer",
         "country": "Argentina",
         "url": "https://juanfbgs.github.io",
-        "summary": "I'm a Software Developer building web applications using PHP, Laravel, Livewire, and React.",
+        "summary": "I'm a Software Developer building web applications using C# .NET",
         "profiles": [
             {
                 "network": "LinkedIn",
@@ -20,21 +20,21 @@
     },
     "skills": [
         {
-            "name": "PHP",
+            "name": "C#",
             "keywords": [
                 "Web development",
                 "Backend"
             ]
         },
         {
-            "name": "Laravel",
+            "name": ".NET",
             "keywords": [
                 "Web development",
                 "Backend"
             ]
         },
         {
-            "name": "Livewire",
+            "name": "Blazor",
             "keywords": [
                 "Web development",
                 "Frontend"
@@ -64,9 +64,19 @@
     ],
     "projects": [
         {
-            "name": "Wiretask",
-            "description": "Task Manager app built with Laravel 13 and Livewire 4",
-            "url": "https://github.com/juanfbgs/wiretask"
+            "name": "BlazorTask",
+            "description": "Task management app built with Blazor SSR",
+            "url": "https://github.com/juanfbgs/BlazorTask"
+        },
+        {
+            "name": "SharpHasher",
+            "description": "File integrity tool written in C#",
+            "url": "https://github.com/juanfbgs/SharpHasher"
+        },
+        {
+            "name": "SharpAlgos",
+            "description": "Algorithms implemented in C# using Generics and Static Classes",
+            "url": "https://github.com/juanfbgs/SharpAlgos"
         }
     ]
 }

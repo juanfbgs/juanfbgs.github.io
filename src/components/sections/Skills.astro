@@ -4,20 +4,25 @@ import Section from "@/components/Section.astro";
 // Note: Ensure your @cv data matches these keys exactly
 import { skills } from "@cv";
 
-import PHP from "@/icons/php.astro";
-import Laravel from "@/icons/laravel.astro";
-import Livewire from "@/icons/livewire.astro";
+import Csharp from "@/icons/csharp.astro";
+import Dotnet from "@/icons/dotnet.astro";
+import Blazor from "@/icons/blazor.astro";
 import React from "@/icons/react.astro";
 import Docker from "@/icons/docker.astro";
 import Linux from "@/icons/linux.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
-    PHP,
-    Laravel,
-    Livewire,
+    Csharp,
+    Dotnet,
+    Blazor,
     React,
     Linux,
     Docker,
+};
+
+const skillNameMap: any = {
+    ".NET": "Dotnet",
+    "C#": "Csharp"
 };
 ---
 
@@ -25,7 +30,7 @@ const SKILLS_ICONS: Record<string, any> = {
     <ul>
         {
             skills.map(({ name }) => {
-                const iconName = name === "Next.js" ? "Next" : name;
+                const iconName = skillNameMap[name] || name;
                 const Icon = SKILLS_ICONS[iconName];
 
                 return (
