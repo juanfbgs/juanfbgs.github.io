@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 not found">
+	<main>
+		<div class="error-container">
+			<span class="status-code">404</span>
+			<h1>Page not found</h1>
+			<p>We couldn't find the page you were looking for.</p>
+			
+			<div class="code-box">
+				<code>
+					<span class="teal">status</span>: <span class="maroon">404_NOT_FOUND</span>
+				</code>
+			</div>
+
+			<div class="nav-links">
+				<a href="/" class="home-button">Go back home</a>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cdd6f4;
+  }
+
+  .error-container {
+    text-align: center;
+  }
+
+  .status-code {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 700;
+    color: #f5c2e7;
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    color: #cba6f7;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: #a6adc8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .code-box {
+    background-color: #181825;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #313244;
+    font-family: var(--font-jetbrains-mono), monospace;
+    font-size: 0.85rem;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+  }
+
+  .teal { color: #94e2d5; }
+  .maroon { color: #eba0ac; }
+
+  .home-button {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid #f5c2e7;
+    color: #f5c2e7;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .home-button:hover {
+    background-color: rgba(245, 194, 231, 0.1);
+    transform: translateY(-1px);
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,67 @@
+{
+    "basics": {
+        "name": "Juan Francisco Burgos",
+        "label": "Software Developer",
+        "country": "Argentina",
+        "url": "https://juanfbgs.github.io",
+        "summary": "I'm a Software Developer interested in PHP and Laravel ecosystem.",
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "juanfburgos",
+                "url": "https://linkedin.com/in/juanfburgos"
+            },
+            {
+                "network": "GitHub",
+                "username": "juanfbgs",
+                "url": "https://github.com/juanfbgs"
+            }
+        ]
+    },
+    "skills": [
+        {
+            "name": "PHP",
+            "keywords": [
+                "Web development",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Laravel",
+            "keywords": [
+                "Web development",
+                "Backend"
+            ]
+        },
+        {
+            "name": "React",
+            "keywords": [
+                "Web development",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "Node.js",
+            "keywords": [
+                "Web development",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Linux",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Docker",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        }
+    ],
+    "projects": [
+    ]
+}

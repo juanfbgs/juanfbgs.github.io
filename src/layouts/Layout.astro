@@ -1,0 +1,98 @@
+---
+import { Font } from "astro:assets";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<Font cssVariable="--font-inter" preload />
+		<Font cssVariable="--font-jetbrains-mono" preload />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: var(--font-inter);
+		background-color: #1e1e2e;
+		letter-spacing: -0.025rem;
+		scroll-behavior: smooth;
+	}
+
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: #fab387 #1e1e2e;
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #1e1e2e;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #45475a;
+		border-radius: 10px;
+		border: 2px solid #1e1e2e;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #fab387;
+	}
+
+	::-webkit-scrollbar-corner {
+		background: #1e1e2e;
+	}
+
+	body,
+	figure {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		color: #cdd6f4;
+	}
+
+	p {
+		color: #bac2de;
+		font-size: 0.9rem;
+		line-height: 1.5;
+		margin: 0;
+		text-wrap: pretty;
+	}
+</style>
