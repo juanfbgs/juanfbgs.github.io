@@ -1,0 +1,100 @@
+{
+    "basics": {
+        "name": "Juan Francisco Burgos",
+        "label": "DevOps",
+        "country": "Argentina",
+        "url": "https://juanfbgs.github.io",
+        "summary": "I'm a DevOps enthusiast passionate about Cloud Infrastructure and automation.",
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "juanfburgos",
+                "url": "https://linkedin.com/in/juanfburgos"
+            },
+            {
+                "network": "GitHub",
+                "username": "juanfbgs",
+                "url": "https://github.com/juanfbgs"
+            }
+        ]
+    },
+    "skills": [
+        {
+            "name": "Python",
+            "keywords": [
+                "Web development",
+                "Backend"
+            ]
+        },
+        {
+            "name": "FastAPI",
+            "keywords": [
+                "Web development",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Linux",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Docker",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Terraform",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        },
+        {
+            "name": "Kubernetes",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        },
+        {
+            "name": "AWS",
+            "keywords": [
+                "Infrastructure",
+                "Backend"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Floci Terraform Lab",
+            "description": "A local lab designed to practice and experiment with Terraform",
+            "url": "https://github.com/juanfbgs/floci-terraform-lab"
+        },
+        {
+            "name": "AWS VPC",
+            "description": "VPC setup with Terraform and Floci",
+            "url": "https://github.com/juanfbgs/floci-terraform-vpc"
+        },
+        {
+            "name": "Argo CD - Minikube demo",
+            "description": "Deploy dashboard to Minikube cluster with Argo CD",
+            "url": "https://github.com/juanfbgs/fastapi-argocd"
+        },
+
+        {
+            "name": "Docker CI/CD Lab",
+            "description": "A local lab to practice CI/CD with Python and FastAPI",
+            "url": "https://github.com/juanfbgs/docker-cicd-lab"
+        },
+        {
+            "name": "Go - Minikube Lab",
+            "description": "A Go HTTP application running on Kubernetes",
+            "url": "https://github.com/juanfbgs/go-k8s"
+        }
+    ]
+}
